@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap');
+
+:root {
+    /* bg-colors */
+    --color-bg-50: #d1d5d8;
+    --color-bg-100: #e1e5e8;
+    --color-bg-200: #dbdfe2;
+
+    /* colors  */
+    --color-primary: #6610F2;
+    --color-black: #212121;
+    --color-select: #4AFC97;
+    --color-link: #ff136b;
+
+    --color-gradient: linear-gradient(80deg, var(--color-bg-50), var(--color-bg-100), var(--color-bg-200));
+}
+
+/* ==== RESET ====  */
+
+*::selection {
+    background: var(--color-select);
+    color: var(--color-black);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: var(--color-gradient);
+}
+
+#titulos-menu {
+    font-family: 'Jura', sans-serif;
+    position: relative;
+    margin: auto;
+    left: 10%;
+    padding-top: 40px;
+    display: inline-block;
+    font-size: 40px;
+    color: var(--color-primary);
+    border-bottom: 2px dotted var(--color-primary);
+}
+
+/* ==== MENU ==== */
+.header-main {
+    padding-top: 1px;
+    padding-bottom: 40px;
+    background-image: url(../img/bg.png);
+    border-bottom: 3px dotted var(--color-primary);
+    height: 768px;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+.menu ul {
+    margin-top: -30px;
+    text-align: center;
+    font-size: 26px;
+    color: var(--color-black);
+    font-family: 'Jura', sans-serif;
+
+}
+
+.menu ul a {
+    color: black;
+}
+
+.menu ul b {
+    color: var(--color-primary);
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.menu li {
+    display: inline-block;
+    margin-left: 60px;
+    border-bottom: 2.5px dotted var(--color-primary);
+}
+
+.menu ul li a:hover {
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: var(--color-bg-200);
+}
+
+.logo-name {
+    display: inline-block;
+    color: var(--color-primary);
+    margin-left: 90px;
+    margin-top: 40px;
+    font-size: 36px;
+    font-family: 'Jura', sans-serif;
+    text-align: left;
+}
+
+.container-author {
+    margin-top: 137px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.author img {
+    position: relative;
+    bottom: 81px;
+    right: 36px;
+    width: 325px;
+    height: 410px;
+    animation: rota-circle;
+    animation-duration: 5s;
+}
+
+@keyframes rota-circle {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.author img:hover {
+    transition-duration: 0.2s;
+    bottom: 86px;
+    right: 42px;
+    width: 335px;
+    height: 420px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/circle-hover.svg);
+    animation: rota-circle-hover;
+    animation-duration: 5s;
+}
+
+@keyframes rota-circle-hover {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.author:hover {
+    filter: brightness(0.95) saturate(1.1) blur(0.2px);
+}
+
+
+.author {
+    background-image: url(../img/photo.JPG);
+    box-shadow: 0px 10px 30px -7px rgba(0, 0, 0, 0.7);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 5px solid var(--color-primary);
+    width: 250px;
+    height: 250px;
+}
+
+
+.author-titulo h1 {
+    margin-top: 60px;
+    font-size: 36px;
+    font-family: 'Jura', sans-serif;
+    color: var(--color-black);
+}
+
+.author-titulo h1 b {
+    margin-top: 30px;
+    font-size: 68px;
+    color: var(--color-primary);
+    font-family: 'Jura', sans-serif;
+}
+
+.author-titulo p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Jura', sans-serif;
+    color: var(--color-black);
+}
+
+
+
+
+/* ==== REDES SOCIAIS ==== */
+.container-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+}
+
+.container-social img {
+    height: 50px;
+    width: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    opacity: 0.8;
+}
+
+.container-social img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    opacity: 0.6;
+}
+
+
+
+
+/* ==== PROJETOS ==== */
+.section-projetos {
+    font-family: 'Jura', sans-serif;
+    background: var(--color-gradient);
+    height: auto;
+}
+
+
+.main-project {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+
+}
+
+.main-project img {
+    display: inline-block;
+    padding: 50px;
+    width: 500px;
+}
+
+.texto-project {
+    height: 150px;
+    display: block;
+    text-align: center;
+
+}
+
+.texto-project h1 {
+    font-size: 36px;
+}
+
+.texto-project p {
+    font-size: 26px;
+    color: var(--color-primary);
+}
+
+
+
+
+
+/* ==== SOBRE ==== */
+.section-sobre {
+    border-top: 3px dotted var(--color-primary);
+    background: var(--color-gradient);
+    height: auto;
+    padding-bottom: 45px;
+}
+
+.main-sobre {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+}
+
+.main-sobre .sobre {
+    padding-top: 40px;
+    font-family: 'Jura', sans-serif;
+}
+
+
+.sobre p {
+    color: var(--color-black);
+    padding-top: 15px;
+    width: 100%;
+    font-size: 21px
+}
+
+.sobre-p-titulo-sub {
+    width: 63% !important;
+    color: var(--color-black);
+    font-size: 23px !important;
+}
+
+.sobre-p-titulo-sub mark {
+    background-color: #6610F2 !important;
+    color: var(--color-select) !important;
+}
+
+.main-download-cv {
+    /* width: 165px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.main-download-cv img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+.main-download-cv p {
+    padding-bottom: 25px;
+    align-items: center;
+    font-size: 19px;
+    text-align: center;
+}
+
+.main-download-cv p mark {
+    padding: 7px;
+    border: 2px dotted var(--color-select);
+    background-color: #6610F2;
+    color: var(--color-select);
+}
+
+
+/* ===== CONTATO ==== */
+.section-contato {
+    background-color: var(--color-primary);
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border-bottom: 3px dotted var(--color-select);
+}
+
+.main-contato .titulo-contato {
+    display: inline-block;
+    font-size: 40px;
+    color: var(--color-link);
+    border-bottom: 2px dotted var(--color-link);
+}
+
+.main-contato {
+    font-family: 'Jura', sans-serif;
+    width: 80%;
+    margin: auto;
+}
+
+.main-contato .h2-contato {
+    color: var(--color-bg-100);
+    font-size: 80px;
+}
+
+.main-contato .email-contato {
+    display: flex;
+    font-size: 40px;
+    color: var(--color-black);
+}
+
+.main-contato .email-contato a {
+    color: var(--color-link);
+}
+
+.email-contato a::selection {
+    background-color: var(--color-bg-50);
+    color: var(--color-link);
+}
+
+
+
+/* ==== FOOTER ==== */
+
+footer {
+    background-color: var(--color-black);
+    height: 200px;
+}
+
+.footer-main {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-bg-50);
+}
+
+.footer-main span {
+    font-family: 'Jura', sans-serif;
+    font-size: 16px;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.footer-main .container-social {
+    margin-top: 80px !important;
+}
+
+.footer-main .seta-button {
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    height: 150px;
+    width: 150px;
+    left: 48%;
+    margin-top: 35px;
+}
+
+.footer-main .seta-button p a {
+    padding: 10px;
+    font-family: 'Jura', sans-serif;
+    font-size: 19px;
+    color: var(--color-bg-50);
+}
+
+.seta-button img:hover {
+    filter: saturate(1.8);
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.seta-button p a:hover {
+    color: var(--color-select);
+    border-bottom: 2px dotted var(--color-select);
+    font-size: 21px;
+}
