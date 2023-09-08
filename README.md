@@ -1,4 +1,1 @@
-AINDA NÃO TERMINEI, FALTA DEIXAR RESPONSIVO !!!
-PARA CELULARES E TABLETS
-
 # portfolio-paulo-gustavo-ferreira
