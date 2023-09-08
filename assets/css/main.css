@@ -40,67 +40,296 @@ body {
     position: relative;
     margin: auto;
     left: 10%;
-    padding-top: 40px;
+    padding-top: 25px;
     display: inline-block;
     font-size: 40px;
     color: var(--color-primary);
     border-bottom: 2px dotted var(--color-primary);
 }
 
-/* ==== MENU ==== */
 .header-main {
-    padding-top: 1px;
-    padding-bottom: 40px;
+    padding-bottom: 25px;
     background-image: url(../img/bg.png);
     border-bottom: 3px dotted var(--color-primary);
-    height: 768px;
     background-size: cover;
     background-position: 50%;
     background-repeat: no-repeat;
+
 }
 
-.menu ul {
-    margin-top: -30px;
-    text-align: center;
-    font-size: 26px;
-    color: var(--color-black);
+/* ==== MENU ==== */
+
+.nav-bar {
     font-family: 'Jura', sans-serif;
-
+    display: flex;
+    justify-content: center;
+    /* padding-top: 20px; */
 }
 
-.menu ul a {
-    color: black;
-}
-
-.menu ul b {
-    color: var(--color-primary);
-    margin-right: 10px;
-    font-size: 16px;
-}
-
-.menu li {
+.logo {
+    display: flex;
+    justify-content: flex-start;
     display: inline-block;
+    font-family: 'Jura', sans-serif;
+    margin: 10px 15px;
+}
+
+.logo h1 {
+    color: var(--color-primary);
+    font-size: 36px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-item {
     margin-left: 60px;
     border-bottom: 2.5px dotted var(--color-primary);
 }
 
-.menu ul li a:hover {
+.nav-item b {
+    color: var(--color-primary);
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 26px;
+    color: var(--color-black);
+    font-weight: 400;
+}
+
+.nav-bar ul li a:hover {
     text-transform: uppercase;
     cursor: pointer;
     background-color: var(--color-primary);
     color: var(--color-bg-200);
 }
 
-.logo-name {
-    display: inline-block;
-    color: var(--color-primary);
-    margin-left: 90px;
-    margin-top: 40px;
-    font-size: 36px;
-    font-family: 'Jura', sans-serif;
-    text-align: left;
+.mobile-menu-icon {
+    display: none;
 }
 
+.mobile-menu {
+    display: none;
+}
+
+
+/* 480px 768px 1280px  */
+@media screen and (max-width: 768px) {
+
+    /* ==== MENU MOBILE ==== */
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+
+    .nav-item {
+        font-family: 'Jura', sans-serif;
+        display: none;
+        text-align: left;
+    }
+
+    .nav-item a:hover {
+        text-transform: uppercase;
+        cursor: pointer;
+        background-color: var(--color-primary);
+        color: var(--color-bg-200);
+    }
+
+
+    .mobile-menu-icon {
+        display: block;
+        position: absolute;
+        right: 0;
+        margin-right: 20px;
+    }
+
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .mobile-menu .login-button {
+        display: block;
+        padding: 1rem 2rem;
+    }
+
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+
+    .open {
+        display: block;
+    }
+
+
+    /* #### AUTHOR MOBILE #### */
+    .container-author .author {
+        width: 225px;
+        height: 225px;
+    }
+
+    .container-author .author img {
+        width: 305px;
+        height: 510px;
+        bottom: 143px;
+        right: 40px;
+    }
+
+    .container-author .author img:hover {
+        width: 305px;
+        height: 510px;
+        bottom: 143px;
+        right: 40px;
+    }
+
+    .container-author .author-titulo h1 b {
+        font-size: 34px;
+    }
+
+    .container-author .author-titulo h1 {
+        font-size: 20px;
+    }
+
+    .container-author .author-titulo p {
+        font-size: 20px;
+    }
+
+
+    /* ### SOCIAL MOBILE ### */
+    .container-social a img {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* ### PROJETOS MOBILE ### */
+
+    #titulos-menu {
+        font-size: 26px;
+    }
+
+    .section-projetos .main-project a img {
+        width: 245px;
+        padding: 1.2rem;
+    }
+
+    .section-projetos .main-project p {
+        font-size: 17px;
+
+    }
+
+    .section-projetos .main-project h1 {
+        font-size: 24px;
+
+    }
+
+    .section-projetos .main-project .texto-project {
+        height: 125px;
+    }
+
+    /* ### SOBRE MOBILE ### */
+    .section-sobre .main-sobre .sobre {
+        padding-top: 10px;
+    }
+
+    .section-sobre .sobre .sobre-p-titulo {
+        font-size: 17px;
+    }
+
+    .section-sobre .sobre .sobre-p-titulo-sub {
+        font-size: 16px !important;
+        width: 100% !important;
+    }
+
+
+    /* ### CONTATO MOBILE */
+
+    .section-contato {
+        height: 195px !important;
+        padding-top: 30px !important;
+    }
+
+
+    .section-contato .main-contato .titulo-contato {
+        font-size: 29px;
+    }
+
+    .section-contato .main-contato .h2-contato {
+        font-size: 26px;
+
+    }
+
+    .section-contato .main-contato .email-contato {
+        padding-top: 10px;
+        font-size: 20px;
+
+    }
+
+    /* ### FOOTER MOBILE ### */
+
+    .footer-main {
+        width: 80% !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .footer-main .logo h1 {
+        margin-top: 5px !important;
+        margin-left: 5px !important;
+        font-size: 19px !important;
+    }
+
+    .footer-main span {
+        margin-top: 120px !important;
+        font-size: 8px !important;
+    }
+
+    .footer-main .seta-button {
+        margin-top: 5px !important;
+    }
+
+    .footer-main .seta-button a {
+        font-size: 12px !important;
+    }
+
+    .footer-main .seta-button img {
+        width: 25px;
+    }
+
+    .footer-main .container-social a img {
+        width: 25px;
+        height: 25px;
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+        margin-top: 38px !important;
+    }
+}
+
+/* ==== # FIM MENU ==== */
 .container-author {
     margin-top: 137px;
     display: flex;
@@ -155,7 +384,7 @@ body {
 }
 
 .author:hover {
-    filter: brightness(0.95) saturate(1.1) blur(0.2px);
+    filter: brightness(0.95) saturate(1.2) blur(0.2px);
 }
 
 
@@ -195,22 +424,19 @@ body {
 }
 
 
-
-
 /* ==== REDES SOCIAIS ==== */
 .container-social {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
-
 }
 
 .container-social img {
     height: 50px;
     width: 50px;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
     opacity: 0.8;
 }
 
@@ -227,11 +453,11 @@ body {
 .section-projetos {
     font-family: 'Jura', sans-serif;
     background: var(--color-gradient);
-    height: auto;
 }
 
 
 .main-project {
+    padding-top: 10px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -247,7 +473,7 @@ body {
 }
 
 .texto-project {
-    height: 150px;
+    height: 140px;
     display: block;
     text-align: center;
 
@@ -282,7 +508,7 @@ body {
 }
 
 .main-sobre .sobre {
-    padding-top: 40px;
+    padding-top: 25px;
     font-family: 'Jura', sans-serif;
 }
 
@@ -306,7 +532,6 @@ body {
 }
 
 .main-download-cv {
-    /* width: 165px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -322,7 +547,7 @@ body {
 .main-download-cv p {
     padding-bottom: 25px;
     align-items: center;
-    font-size: 19px;
+    font-size: 16px;
     text-align: center;
 }
 
@@ -337,9 +562,8 @@ body {
 /* ===== CONTATO ==== */
 .section-contato {
     background-color: var(--color-primary);
-    height: auto;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    height: 300px;
+    padding-top: 85px;
     border-bottom: 3px dotted var(--color-select);
 }
 
@@ -363,6 +587,7 @@ body {
 
 .main-contato .email-contato {
     display: flex;
+    flex-wrap: wrap;
     font-size: 40px;
     color: var(--color-black);
 }
@@ -381,8 +606,17 @@ body {
 /* ==== FOOTER ==== */
 
 footer {
+    font-family: 'Jura', sans-serif;
     background-color: var(--color-black);
-    height: 200px;
+    height: 208px;
+}
+
+.footer-main .logo h1 {
+    margin-top: 20px;
+    margin-left: 80px;
+    color: var(--color-select);
+    border-bottom: 2px dotted var(--color-select);
+    font-size: 36px;
 }
 
 .footer-main {
@@ -394,31 +628,23 @@ footer {
 }
 
 .footer-main span {
-    font-family: 'Jura', sans-serif;
     font-size: 16px;
     position: absolute;
     display: inline-block;
     text-align: center;
-    padding-top: 100px;
+    margin-top: 100px;
 }
 
-.footer-main .container-social {
-    margin-top: 80px !important;
-}
 
 .footer-main .seta-button {
-    position: absolute;
     align-items: center;
     text-align: center;
-    height: 150px;
-    width: 150px;
-    left: 48%;
     margin-top: 35px;
+
 }
 
 .footer-main .seta-button p a {
     padding: 10px;
-    font-family: 'Jura', sans-serif;
     font-size: 19px;
     color: var(--color-bg-50);
 }
@@ -432,5 +658,4 @@ footer {
 .seta-button p a:hover {
     color: var(--color-select);
     border-bottom: 2px dotted var(--color-select);
-    font-size: 21px;
 }
