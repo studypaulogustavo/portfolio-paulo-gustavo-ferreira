@@ -4,24 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paulo Gustavo</title>
+    <title>Paulo Gustavo Ferreira</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
 </head>
 
 <body>
     <header class="header-main">
-
         <!-- ===== MENU ==== -->
-        <nav class="menu">
-            <a class="logo-name" href="">Paulo._</a>
-            <ul>
-                <li><b>01</b><a href="#">// Home</a></li>
-                <li><b>02</b><a href="#projetos">// Projetos</a></li>
-                <li><b>03</b><a href="#sobre">// Sobre</a></li>
-                <li><b>04</b><a href="#contato">// Contato</a></li>
-            </ul>
+        <div class="logo">
+            <h1>Paulo._</h1>
+        </div>
+        <nav class="nav-bar">
+
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><b>01</b><a href="index.html" class="nav-link"> // Home</a></li>
+                    <li class="nav-item"><b>02</b><a href="#projetos" class="nav-link"> // Projetos</a></li>
+                    <li class="nav-item"><b>03</b><a href="#sobre" class="nav-link"> // Sobre</a></li>
+                    <li class="nav-item"><b>04</b><a href="#contato" class="nav-link"> // Contato</a></li>
+                </ul>
+            </div>
+
+            <!-- DISPLAY FLEX MENU -->
+            <div></div>
+
+            <!-- ==== MENU MOBILE BUTTON === -->
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img width="35" class="icon" src="assets/img/menu_mobile.svg"
+                        alt=""></button>
+            </div>
         </nav>
+
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link"> // Home</a></li>
+                <li class="nav-item"><a href="#projetos" class="nav-link"> // Projetos</a></li>
+                <li class="nav-item"><a href="#sobre" class="nav-link"> // Sobre</a></li>
+                <li class="nav-item"><a href="#contato" class="nav-link"> // Contato</a></li>
+            </ul>
+        </div>
+
+        <!-- ==== AUTHOR ==== -->
         <div class="container-author">
             <div class="author">
                 <img src="assets/img/circle.svg" alt="">
@@ -31,6 +55,7 @@
                 <p>Paulo Gustavo Ferreira</p>
             </div>
         </div>
+
         <div class="container-social">
 
             <!-- E-mail -->
@@ -48,7 +73,7 @@
             </a>
 
             <!-- Instagram -->
-            <a href="https://www.instagram.com/paulogustavogf/">
+            <a href="https://www.instagram.com/paulogustavogf">
                 <img src="assets/img/insta.png" alt="Instagram logo">
             </a>
 
@@ -91,7 +116,7 @@
                     </div>
 
                     <div class="project-4">
-                        <a href="https://studypaulogustavo.github.io/login-dark-light/">
+                        <a href="#Projeto0001">
                             <img src="assets/img/project-4.png" alt="">
                         </a>
                         <div class="texto-project">
@@ -152,7 +177,7 @@
                     <h1 class="titulo-contato">// CONTATO</h1>
                     <h1 class="h2-contato"><b>Me mande um E-mail!</b></h1>
                     <h2 class="email-contato"><b>Deixe-me uma mensagem em&nbsp;</b><a
-                            href="">paulogustavo750@gmail.com</a>
+                            href="mailto:paulogustavo750@gmail.com">paulogustavo750@gmail.com</a>
                     </h2>
                 </div>
             </div>
@@ -161,7 +186,9 @@
     </main>
     <footer>
         <div class="footer-main">
-            <a class="logo-name" href="">Paulo._</a>
+            <div class="logo">
+                <h1>Paulo._</h1>
+            </div>
             <span>
                 <p>© Todos os direitos reservados</p>
                 <br>
@@ -174,27 +201,29 @@
             <div class="container-social">
 
                 <!-- E-mail -->
-                <a href="#/email">
+                <a href="mailto:paulogustavo750@gmail.com">
                     <img src="assets/img/email.png" alt="E-mail logo">
                 </a>
 
                 <!-- LinkedIn -->
-                <a href="#/IN">
+                <a href="https://www.linkedin.com/in/paulogustavoferreira/">
                     <img src="assets/img/in.png" alt="LinkedIn logo">
                 </a>
                 <!-- GitHub -->
-                <a href="#/Git">
+                <a href="https://github.com/studypaulogustavo">
                     <img src="assets/img/github.png" alt="GitHub logo">
                 </a>
 
                 <!-- Instagram -->
-                <a href="#/insta">
+                <a href="https://www.instagram.com/paulogustavogf">
                     <img src="assets/img/insta.png" alt="Instagram logo">
                 </a>
 
             </div>
         </div>
     </footer>
+
+    <script src="assets/js/script.js"></script>
 
 </body>
 
