@@ -283,6 +283,8 @@ body {
     .section-contato {
         height: 145px !important;
         padding-top: 30px !important;
+        border-top: 2px dotted var(--color-link) !important;
+        border-bottom: 2px dotted var(--color-link) !important;
     }
 
 
@@ -341,7 +343,7 @@ body {
         height: 25px;
         margin-left: 5px !important;
         margin-right: 5px !important;
-        margin-top: -2px !important;
+        margin-top: -15px !important;
 
     }
 }
@@ -607,7 +609,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     font-size: 32px;
-    color: var(--color-bg-100);
+    color: var(--color-black);
 }
 
 .main-contato .email-contato a {
