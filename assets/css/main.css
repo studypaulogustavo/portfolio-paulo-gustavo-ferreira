@@ -88,7 +88,7 @@ body {
 
 .logo h1:hover {
     cursor: pointer;
-    color: var(--color-bg-200);
+    color: var(--color-link);
     background-color: #510AC2;
 }
 
