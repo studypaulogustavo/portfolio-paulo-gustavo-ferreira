@@ -1,18 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400&display=swap');
 
 :root {
-    /* bg-colors */
+    /* BG-COLORS */
     --color-bg-50: #d1d5d8;
     --color-bg-100: #e1e5e8;
     --color-bg-200: #dbdfe2;
 
-    /* colors  */
+    /* COLORS  */
     --color-primary: #6610F2;
     --color-black: #212121;
     --color-select: #4AFC97;
     --color-link: #ff136b;
 
     --color-gradient: linear-gradient(80deg, var(--color-bg-50), var(--color-bg-100), var(--color-bg-200));
+
+    /* FONTS-SIZE */
+    --body-font: 'Jura', sans-serif;
+    --font-smaller: .87rem;
+    --font-normal: 1.188rem;
+    --font-big: 1.6rem;
+    --font-huge: 2.3rem;
 }
 
 /* ==== RESET ====  */
@@ -36,13 +43,13 @@ body {
 }
 
 #titulos-menu {
-    font-family: 'Jura', sans-serif;
+    font-family: var(--body-font);
     position: relative;
     margin: auto;
     left: 10%;
-    padding-top: 25px;
+    margin-top: 25px;
     display: inline-block;
-    font-size: 40px;
+    font-size: var(--font-huge);
     color: var(--color-primary);
     border-bottom: 2px dotted var(--color-primary);
 }
@@ -60,7 +67,7 @@ body {
 /* ==== MENU ==== */
 
 .nav-bar {
-    font-family: 'Jura', sans-serif;
+    font-family: var(--body-font);
     display: flex;
     justify-content: center;
     /* padding-top: 20px; */
@@ -70,14 +77,21 @@ body {
     display: flex;
     justify-content: flex-start;
     display: inline-block;
-    font-family: 'Jura', sans-serif;
+    font-family: var(--body-font);
     margin: 10px 15px;
 }
 
 .logo h1 {
     color: var(--color-primary);
-    font-size: 36px;
+    font-size: var(--font-huge);
 }
+
+.logo h1:hover {
+    cursor: pointer;
+    color: var(--color-bg-200);
+    background-color: #510AC2;
+}
+
 
 .nav-list {
     display: flex;
@@ -103,7 +117,7 @@ body {
 
 .nav-link {
     text-decoration: none;
-    font-size: 26px;
+    font-size: var(--font-big);
     color: var(--color-black);
     font-weight: 400;
 }
@@ -133,7 +147,7 @@ body {
     }
 
     .nav-item {
-        font-family: 'Jura', sans-serif;
+        font-family: var(--body-font);
         display: none;
         text-align: left;
     }
@@ -255,7 +269,7 @@ body {
     }
 
     .section-sobre .sobre .sobre-p-titulo {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .section-sobre .sobre .sobre-p-titulo-sub {
@@ -267,25 +281,26 @@ body {
     /* ### CONTATO MOBILE */
 
     .section-contato {
-        height: 195px !important;
+        height: 145px !important;
         padding-top: 30px !important;
     }
 
 
     .section-contato .main-contato .titulo-contato {
-        font-size: 29px;
+        font-size: var(--font-big);
     }
 
     .section-contato .main-contato .h2-contato {
-        font-size: 26px;
+        font-size: 24px;
 
     }
 
     .section-contato .main-contato .email-contato {
         padding-top: 10px;
-        font-size: 20px;
+        font-size: 16px;
 
     }
+
 
     /* ### FOOTER MOBILE ### */
 
@@ -320,12 +335,14 @@ body {
         width: 25px;
     }
 
+
     .footer-main .container-social a img {
         width: 25px;
         height: 25px;
         margin-left: 5px !important;
         margin-right: 5px !important;
-        margin-top: 38px !important;
+        margin-top: -2px !important;
+
     }
 }
 
@@ -384,7 +401,7 @@ body {
 }
 
 .author:hover {
-    filter: brightness(0.95) saturate(1.2) blur(0.2px);
+    filter: brightness(0.95) saturate(1.2);
 }
 
 
@@ -403,23 +420,23 @@ body {
 
 .author-titulo h1 {
     margin-top: 60px;
-    font-size: 36px;
-    font-family: 'Jura', sans-serif;
+    font-size: var(--font-big);
+    font-family: var(--body-font);
     color: var(--color-black);
 }
 
 .author-titulo h1 b {
     margin-top: 30px;
-    font-size: 68px;
+    font-size: 70px;
     color: var(--color-primary);
-    font-family: 'Jura', sans-serif;
+    font-family: var(--body-font);
 }
 
 .author-titulo p {
     margin-top: 10px;
     text-align: center;
     font-size: 30px;
-    font-family: 'Jura', sans-serif;
+    font-family: var(--body-font);
     color: var(--color-black);
 }
 
@@ -433,8 +450,8 @@ body {
 }
 
 .container-social img {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     margin-left: 15px;
     margin-right: 15px;
     opacity: 0.8;
@@ -451,7 +468,7 @@ body {
 
 /* ==== PROJETOS ==== */
 .section-projetos {
-    font-family: 'Jura', sans-serif;
+    font-family: var(--body-font);
     background: var(--color-gradient);
 }
 
@@ -480,11 +497,11 @@ body {
 }
 
 .texto-project h1 {
-    font-size: 36px;
+    font-size: var(--font-huge);
 }
 
 .texto-project p {
-    font-size: 26px;
+    font-size: var(--font-big);
     color: var(--color-primary);
 }
 
@@ -509,7 +526,7 @@ body {
 
 .main-sobre .sobre {
     padding-top: 25px;
-    font-family: 'Jura', sans-serif;
+    font-family: var(--body-font);
 }
 
 
@@ -517,13 +534,13 @@ body {
     color: var(--color-black);
     padding-top: 15px;
     width: 100%;
-    font-size: 21px
+    font-size: var(--font-normal);
 }
 
 .sobre-p-titulo-sub {
     width: 63% !important;
     color: var(--color-black);
-    font-size: 23px !important;
+    font-size: var(--font-normal) !important;
 }
 
 .sobre-p-titulo-sub mark {
@@ -547,7 +564,7 @@ body {
 .main-download-cv p {
     padding-bottom: 25px;
     align-items: center;
-    font-size: 16px;
+    font-size: var(--font-smaller);
     text-align: center;
 }
 
@@ -561,21 +578,22 @@ body {
 
 /* ===== CONTATO ==== */
 .section-contato {
-    background-color: var(--color-primary);
+    background-color: #510AC2;
     height: 300px;
     padding-top: 85px;
-    border-bottom: 3px dotted var(--color-select);
+    border-top: 3px dotted var(--color-link);
+    border-bottom: 3px dotted var(--color-link);
 }
 
 .main-contato .titulo-contato {
     display: inline-block;
-    font-size: 40px;
+    font-size: var(--font-huge);
     color: var(--color-link);
     border-bottom: 2px dotted var(--color-link);
 }
 
 .main-contato {
-    font-family: 'Jura', sans-serif;
+    font-family: var(--body-font);
     width: 80%;
     margin: auto;
 }
@@ -588,8 +606,8 @@ body {
 .main-contato .email-contato {
     display: flex;
     flex-wrap: wrap;
-    font-size: 40px;
-    color: var(--color-black);
+    font-size: 32px;
+    color: var(--color-bg-100);
 }
 
 .main-contato .email-contato a {
@@ -606,7 +624,7 @@ body {
 /* ==== FOOTER ==== */
 
 footer {
-    font-family: 'Jura', sans-serif;
+    font-family: var(--body-font);
     background-color: var(--color-black);
     height: 208px;
 }
@@ -616,7 +634,7 @@ footer {
     margin-left: 80px;
     color: var(--color-select);
     border-bottom: 2px dotted var(--color-select);
-    font-size: 36px;
+    font-size: var(--font-huge);
 }
 
 .footer-main {
@@ -635,6 +653,11 @@ footer {
     margin-top: 100px;
 }
 
+.footer-main .container-social {
+    margin-top: 70px;
+    padding-bottom: 5px;
+    border-bottom: 2px dotted var(--color-bg-50);
+}
 
 .footer-main .seta-button {
     align-items: center;
@@ -645,7 +668,7 @@ footer {
 
 .footer-main .seta-button p a {
     padding: 10px;
-    font-size: 19px;
+    font-size: var(--font-normal);
     color: var(--color-bg-50);
 }
 
