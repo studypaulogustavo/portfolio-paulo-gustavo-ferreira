@@ -88,7 +88,7 @@ body {
 
 .logo h1:hover {
     cursor: pointer;
-    color: var(--color-link);
+    color: #fff;
     background-color: #510AC2;
 }
 
@@ -343,7 +343,7 @@ body {
         height: 25px;
         margin-left: 5px !important;
         margin-right: 5px !important;
-        margin-top: -15px !important;
+        margin-top: -5px !important;
 
     }
 }
@@ -592,6 +592,9 @@ body {
     font-size: var(--font-huge);
     color: var(--color-link);
     border-bottom: 2px dotted var(--color-link);
+    background-color: black;
+    padding: 10px 10px 0px 10px;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .main-contato {
@@ -609,7 +612,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     font-size: 32px;
-    color: var(--color-black);
+    color: var(--color-bg-100);
 }
 
 .main-contato .email-contato a {
@@ -628,7 +631,7 @@ body {
 footer {
     font-family: var(--body-font);
     background-color: var(--color-black);
-    height: 208px;
+    height: 210px;
 }
 
 .footer-main .logo h1 {
